@@ -6,18 +6,17 @@ module.exports = settings => {
   }
   let data = JSON.stringify({
     'guilds': settings.servercount || 0,
-    'shards': settings.shardscount || 0,
     'users': settings.usercount || 0
   });
   let options = {
     hostname: 'discordbotlist.com',
     port: 443,
-    path: `/api/v1/bots/${settings.clientid}`,
+    path: `/api/v1/bots/${settings.clientid}/stats`,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': data.length,
-      'authorization': settings.listings.discordbotlist
+      'Authorization': settings.listings.discordbotlist
     }
   }
   const req = https.request(options, (res) => {

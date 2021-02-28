@@ -5,7 +5,7 @@ module.exports = settings => {
     return
   }
   let data = JSON.stringify({
-    'ServerCount': settings.servercount || 0,
+    'serverCount': settings.servercount || 0,
     'shardCount': settings.shardscount || 0
   });
   let options = {

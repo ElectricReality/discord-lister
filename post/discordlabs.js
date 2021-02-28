@@ -1,31 +1,31 @@
 const https = require('https')
 
 module.exports = settings => {
-  if (!settings.listings.topcord) {
+  if (!settings.listings.discordlabs) {
     return
   }
   let data = JSON.stringify({
-    'guilds': settings.servercount || 0,
-    'shards': settings.shardscount || 0,
+    'server_count': settings.servercount || 0,
+    'shard_count': settings.shardscount || 0,
   });
   let options = {
-    hostname: 'api.topcord.xyz',
+    hostname: 'bots.discordlabs.org',
     port: 443,
-    path: `/bot/${settings.clientid}/stats`,
+    path: `/v2/bot/${settings.clientid}/stats`,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': data.length,
-      'authorization': settings.listings.topcord
+      'Authorization': settings.listings.discordlabs                            
     }
   }
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
       if(settings.output == true){
-        console.log('[TopCord.xyz] Post success!')
+        console.log('[discordlabs] Post success!')
       }
     } else {
-      console.log(`[TopCord.xyz] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+      console.log(`[discordlabs] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }
   })
   req.on('error', (error) => {

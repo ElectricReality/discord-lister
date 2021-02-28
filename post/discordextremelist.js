@@ -11,7 +11,7 @@ module.exports = settings => {
   let options = {
     hostname: 'api.discordextremelist.xyz',
     port: 443,
-    path: `/v2/bot/${settings.clientid}`,
+    path: `/v2/bot/${settings.clientid}/stats`,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
