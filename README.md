@@ -5,43 +5,47 @@ An all-in-one poster for bot stats. Supports the following bot listing services:
 - discord.boats
 - bots.ondiscord.xyz
 - botsfordiscord.com
-- botlist.space
+- discordlist.space
 - topcord.xyz
 - discordextremelist.xyz
 - discordbotlist.com
 - sentcord.com
 - dbots.co
 - bots.discordlabs.org
+- blist.xyz
 
 ### Example
 ``` js
-const botlist = require('discord-lister');
+const publisher = require('discord-publisher');
 
 let settings = {
-  listings: {
-    topgg: "", // TOKEN HERE
-    discordbotsgg: "", // TOKEN HERE
-    discordboats: "", // TOKEN HERE
-    botsondiscord: "", // TOKEN HERE
-    botsfordiscord: "", // TOKEN HERE
-    botlistspace: "", // TOKEN HERE
-    topcord: "", // TOKEN HERE
-    discordextremelist: "", // TOKEN HERE
-    discordbotlist: "", // TOKEN HERE
-    sentcord: "", // TOKEN HERE
-    dbotsco: "", // TOKEN HERE
-    discordlabs: "" // TOKEN HERE
-  },
-  clientid: "CLIENT ID HERE", // REQUIRED
-  servercount: 0, // Integer
-  shardscount: 0, // Integer
-  shardsid: 0, // Integer
-  usercount: 0 , // Integer
-  output: false // Boolean
-
+	listings: {
+		// tokens for sites here
+		// leave blank or remove site if not posting to that site
+		topgg: "", 
+		discordbotsgg: "", 
+		discordboats: "", 
+		botsondiscord: "", 
+		botsfordiscord: "", 
+		botlistspace: "", 
+		topcord: "", 
+		discordextremelist: "", 
+		discordbotlist: "", 
+		sentcord: "", 
+		dbotsco: "", 
+		discordlabs: "",
+		blist: ""
+	},
+	// the following is required
+	clientid: "CLIENT ID HERE",
+	servercount: 0,
+	shardscount: 0,
+	shardsid: 0,
+	usercount: 0 ,
+	output: false
 }
 
-botlist.post(settings)
+publisher.post(settings)
 ```
 ### Requests to add new bot lists?
 Send a Pull Request of your fork with the latest version of the repo and add the bot list at *post*.

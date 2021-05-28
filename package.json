@@ -1,14 +1,14 @@
 {
-  "name": "discord-lister",
-  "description": "An all-in-one poster for bot stats.",
+  "name": "discord-publisher",
+  "description": "An all-in-one poster for discord bot stats.",
   "version": "1.3.0",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ElectricReality/discord-lister.git"
+    "url": "https://github.com/numselli/discord-publisher.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/ElectricReality/discord-lister",
+  "homepage": "https://github.com/numselli/discord-publisher",
   "keywords": [
     "discord",
     "js",
