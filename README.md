@@ -1,4 +1,6 @@
 # discord-lister
+Check out @numselli's fork here! https://github.com/numselli/discord-publisher
+
 An all-in-one poster for bot stats. Supports the following bot listing services:
 - top.gg
 - discord.bots.gg
@@ -13,10 +15,11 @@ An all-in-one poster for bot stats. Supports the following bot listing services:
 - dbots.co
 - bots.discordlabs.org
 - blist.xyz
+- discord.boats
 
 ### Example
 ``` js
-const publisher = require('discord-publisher');
+const botlist = require('discord-lister');
 
 let settings = {
 	listings: {
@@ -45,12 +48,19 @@ let settings = {
 	output: false
 }
 
-publisher.post(settings)
+botlist.post(settings)
 ```
 ### Requests to add new bot lists?
 Send a Pull Request of your fork with the latest version of the repo and add the bot list at *post*.
 
 ### Changelog
+## Update 1.4.0
+Added New Bot Lists
+- blist.xyz
+- bots.discordlabs.org
+- dbots.co
+Bug fixes
+
 ## Update 1.3.0
 Added New Bot Lists
 - Added discordextremelist.xyz
